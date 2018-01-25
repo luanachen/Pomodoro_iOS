@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PomodoroApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ydx-oT-gGM">
+                                <rect key="frame" x="33.5" y="219" width="253" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-yO-jy1">
+                                        <rect key="frame" x="36" y="0.0" width="181" height="84"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="6E9-jx-alq">
+                                        <rect key="frame" x="0.0" y="114" width="253" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbb-g7-7IH">
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Iniciar">
+                                                    <color key="titleColor" red="0.89802199599999999" green="0.4868168235" blue="0.2258369029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eG4-1Z-sXr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgJ-or-J8B">
+                                                <rect key="frame" x="94" y="0.0" width="65" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Pausar">
+                                                    <color key="titleColor" red="0.89802199599999999" green="0.4868168235" blue="0.2258369029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pauseCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="18z-Kv-60n"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="la7-VK-IES">
+                                                <rect key="frame" x="188" y="0.0" width="65" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Zerar">
+                                                    <color key="titleColor" red="0.89802199599999999" green="0.4868168235" blue="0.2258369029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="restartCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d38-cn-bV9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JrI-SW-Qgy">
+                                <rect key="frame" x="67" y="441" width="185" height="54"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pausa de" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCe-VY-yXq">
+                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="54"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.89802199599999999" green="0.4868168235" blue="0.2258369029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2J7-XL-duI">
+                                        <rect key="frame" x="92.5" y="0.0" width="92.5" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05f-2Q-WFL">
+                                <rect key="frame" x="58" y="88.5" width="204" height="90"/>
+                                <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="gyu-Px-lwn"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha a sua pausa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eF-ub-Wpy">
+                                <rect key="frame" x="67" y="33" width="202" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="05f-2Q-WFL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="GJv-7K-Ojd"/>
+                            <constraint firstItem="JrI-SW-Qgy" firstAttribute="top" secondItem="ydx-oT-gGM" secondAttribute="bottom" constant="72" id="Ree-jz-Xxt"/>
+                            <constraint firstItem="ydx-oT-gGM" firstAttribute="top" secondItem="05f-2Q-WFL" secondAttribute="bottom" constant="41" id="Xrq-Eh-WvI"/>
+                            <constraint firstItem="ydx-oT-gGM" firstAttribute="centerX" secondItem="JrI-SW-Qgy" secondAttribute="centerX" id="c5s-WC-coE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4eF-ub-Wpy" secondAttribute="trailing" constant="51" id="eEU-rj-IUF"/>
+                            <constraint firstItem="05f-2Q-WFL" firstAttribute="centerX" secondItem="ydx-oT-gGM" secondAttribute="centerX" id="fdl-EQ-Cy8"/>
+                            <constraint firstItem="4eF-ub-Wpy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="lXc-DX-oRF"/>
+                            <constraint firstItem="05f-2Q-WFL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lmI-dw-xUP"/>
+                            <constraint firstItem="4eF-ub-Wpy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="wxn-CD-dSv"/>
+                            <constraint firstItem="05f-2Q-WFL" firstAttribute="top" secondItem="4eF-ub-Wpy" secondAttribute="bottom" constant="30.5" id="xG5-ra-uei"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnPause" destination="FgJ-or-J8B" id="hbD-Rr-ym6"/>
+                        <outlet property="btnRestart" destination="la7-VK-IES" id="uxi-bD-ZKg"/>
+                        <outlet property="btnStart" destination="cbb-g7-7IH" id="Vpj-xO-rDG"/>
+                        <outlet property="labelCounter" destination="gYE-yO-jy1" id="JQo-Vz-XYZ"/>
+                        <outlet property="labelPauseCount" destination="2J7-XL-duI" id="Fs3-gb-kAP"/>
+                        <outlet property="pickerViewPausas" destination="05f-2Q-WFL" id="Y8L-CH-7ur"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="132.04225352112675"/>
+        </scene>
+    </scenes>
+</document>
